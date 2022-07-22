@@ -1,5 +1,6 @@
 package com.plcoding.jetpackcomposepokedex.repository
 
+import android.util.Log
 import com.plcoding.jetpackcomposepokedex.data.remote.api.PokeApi
 import com.plcoding.jetpackcomposepokedex.data.remote.response.Pokemon
 import com.plcoding.jetpackcomposepokedex.data.remote.response.PokemonList
@@ -17,6 +18,8 @@ class PokemonRepository @Inject constructor(
         }catch (e:Exception){
             return Resource.Error("An unknown error occured.")
         }
+
+
 
         return Resource.Success(response)
     }
